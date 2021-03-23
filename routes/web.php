@@ -6,7 +6,7 @@ use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routes 
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -14,6 +14,7 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// this is text to demo 
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
