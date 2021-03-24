@@ -4,6 +4,8 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 use Auth;
 use DB;
 use Session;
@@ -53,4 +55,26 @@ class user_infoController extends Controller
 	{
 		return view('user.update_password');
 	}
+	public function updatePassword(Request $request)
+    {
+       $this->validate($request, [
+           'currentPassword' => 'required',
+           'password' => 'required|confirmed',
+       ]);
+       $user = Auth::user();
+       $hashedPassword = $user->password;
+       if (Hash::check($request->currentPassword, $hashedPassword)) {
+            if (!Hash::check($request->password, $hashedPassword)) {
+                $user->update([
+                   'password' => Hash::make($request->password)
+                ]);
+                return redirect('/login');
+            } else {
+				    Session::put('password','New Password can not be as Old Password');              
+            }
+       } else {
+       		Session::put('currentPassword','Current Password did not Matched!');
+       	}
+        return back();
+    }
 }

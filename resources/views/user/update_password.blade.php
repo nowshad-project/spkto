@@ -39,24 +39,30 @@
 				}
 			</style>
 			<div class="password_change">
-				<form action="" method="POST">
+				<form action="{{asset('/user/update-password-store')}}" method="POST">
 				    @csrf
 				    <div class="form-group">
 				    	<input type="password" class="pass_input border-success btn-outline-success form-control @error('currentPassword') is-invalid @enderror" value="{{ old('currentPassword') }}" name="currentPassword" id="currentPassword" aria-describedby="currentPassword" placeholder="Current password">
 				    	@error('currentPassword')
-				    	<small id="confirmNewPassword" class="form-text text-danger">{{ $message }} </small>
+				    	<small id="currentPassword" class="form-text text-danger">{{ $message }} </small>
 				    	@enderror
+				    	@if(session()->exists('currentPassword'))
+				    		<small id="currentPassword" class="form-text text-danger">{{ session()->get('currentPassword') }}{{ session()->forget('currentPassword') }} </small>
+						@endif
 		            </div>
 
 		            <div class="form-group">
-		              	<input type="password" class="pass_input border-success form-control @error('newPassword') is-invalid @enderror" name="newPassword" value="{{ old('newPassword') }}" id="newPassword" aria-describedby="newPassword" placeholder="New Password">
-		              	@error('newPassword')
-		              	<small id="confirmNewPassword" class="form-text text-danger">{{ $message }} </small>
+		              	<input type="password" class="pass_input border-success form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" id="password" aria-describedby="password" placeholder="New Password">
+		              	@error('password')
+		              	<small id="password" class="form-text text-danger">{{ $message }} </small>
 		            	@enderror
+		            	@if(session()->exists('password'))
+				    		<small id="password" class="form-text text-danger">{{ session()->get('password') }}{{ session()->forget('password') }} </small>
+						@endif
 		            </div>
 
 		            <div class="form-group">
-			            <input type="password" class="pass_input border-success btn-outline-success form-control @error('confirmNewPassword') is-invalid @enderror" name="confirmNewPassword" value="{{ old('confirmNewPassword') }}" id="confirmNewPassword" aria-describedby="confirmNewPassword" placeholder="Confirm new password">
+			            <input type="password" class="pass_input border-success btn-outline-success form-control @error('confirmNewPassword') is-invalid @enderror" name="password_confirmation" value="{{ old('confirmNewPassword') }}" id="confirmNewPassword" aria-describedby="confirmNewPassword" placeholder="Confirm new password">
 			            @error('confirmNewPassword')
 			            <small id="confirmNewPassword" class="form-text text-danger">{{ $message }} </small>
 			            @enderror

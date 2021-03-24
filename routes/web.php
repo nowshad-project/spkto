@@ -140,7 +140,7 @@ Route::group(['prefix' => 'user' ,'middleware' =>['auth:sanctum','verified', 'us
 
 			//update password
 			Route::get('update-password', [user_infoController::class, 'show_password_update']);
-			Route::post('update-password-submit', [UpdateUserPassword::class, 'update']);
+			Route::post('update-password-store', [user_infoController::class, 'updatePassword']);
 
 		/*} );*/
 } );
