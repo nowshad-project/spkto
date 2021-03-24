@@ -130,8 +130,11 @@ Route::group(['prefix' => 'user' ,'middleware' =>['auth:sanctum','verified', 'us
 		/*Route::group([ 'middleware' =>['user_info']], function (){*/
 			//Dashboard*/
 			//Route::get('dashboard',[user_dashboardController::class, 'dashboard'] )->name('dashboard');
+
 			//update profile picture
 			Route::get('update-profile-picture', [user_infoController::class, 'show_profile_picture_update']);
+			Route::post('profile-picture-store', [user_infoController::class, 'profile_picture_update']);
+
 			//notification
 			Route::get('notification', [user_notification::class, 'show_all_notification']);
 
