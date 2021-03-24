@@ -1,36 +1,43 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('layouts.frontend.frontend_layout')
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+@section('title', 'Reset Password')
+
+@section('content')
+<link rel="stylesheet" type="text/css" href="{{asset('/')}}css/custom/login.css">
+<!-- start login section -->
+<div class="login_section">
+    <div class="container">
+        <div class="as_login">
+             <h2>Reset Password</h2>
         </div>
-
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
+        @if (session('status'))
+            <div style="color: #3c763d; background-color: #dff0d8;border: 1px solid transparent; border-color: #d6e9c6; border-radius: 4px;">
+                {{ session('status') }}
+            </div>
+        @endif
         <form method="POST" action="{{ route('password.email') }}">
             @csrf
+            <div class="form_item line_hide_form_item">
+                <input type="text" placeholder="Email" class="@error('email') is-invalid @enderror" value="{{ old('email') }}" name="email">
 
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
+                @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <x-button>
-                    {{ __('Email Password Reset Link') }}
-                </x-button>
+            <div class="button_section text-center">
+                <button class="button enable-ripple">Email Password Reset Link</button>
+                <div class="Forgot_btn">
+                    <a class="btn" style="color: #95bf42;" href="{{ route('login') }}">
+                        {{ __('Sign in') }}
+                    </a>
+                </div>
             </div>
         </form>
-    </x-auth-card>
-</x-guest-layout>
+    </div>
+</div>       
+@endsection
+
+

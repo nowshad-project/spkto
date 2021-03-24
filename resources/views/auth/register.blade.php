@@ -1,59 +1,78 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('layouts.frontend.frontend_layout')
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+@section('title', 'Sign up')
 
+@section('content')
+<link rel="stylesheet" type="text/css" href="{{asset('/')}}css/custom/login.css">
+
+<!-- start login section -->
+<div class="login_section" style="margin-bottom: 12px;">
+    <div class="container">
+        <div class="as_login">
+             <h2>sign up</h2>
+        </div>
         <form method="POST" action="{{ route('register') }}">
             @csrf
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form_item line_hide_form_item">
+                        <input type="text" placeholder="Name" class="@error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" >
 
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
-
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                        @error('name')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form_item line_hide_form_item">
+                        <input type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email">
+                        @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form_item line_hide_form_item">
+                        <input type="password" class="@error('password') is-invalid @enderror" name="password" placeholder="Password" >
+                        @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form_item line_hide_form_item">
+                        <input type="password" class="@error('Repeat-password') is-invalid @enderror"  placeholder="Repeat password" name="password_confirmation">
+                        @error('Repeat-password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
+                    </div>
+                </div>
             </div>
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+            @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
+            <div class="accountYet">
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                <p style="margin-bottom: 37px;"><input required="" type="checkbox" name="terms" id="terms"/>  I agree to the <a target="_blank" href="{{ route('terms.show')}}">Terms of Service </a>& <a target="_blank" href="{{ route('policy.show') }}">Privecy policy</a></p>
             </div>
+            @endif
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+            <div class="button_section text-center">
+                 <button type="submit" class="button enable-ripple">Sign up</button>
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
+                 <div class="accountYet">
+                    <p> I have an account?  &nbsp; &nbsp;<a href="{{ route('login') }}">Sign in</a></p>
+                 </div>
             </div>
         </form>
-    </x-auth-card>
-</x-guest-layout>
+    </div>
+</div>
+<!-- end login section -->
+@endsection
