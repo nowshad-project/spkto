@@ -3,6 +3,12 @@
 @section('title', 'Login')
 
 @section('content')
+@if(Auth::check())
+    @php
+        header("Location: " . URL::to('/dashboard'), true, 302);
+        exit();
+    @endphp
+@endif
 <link rel="stylesheet" type="text/css" href="{{asset('/')}}css/custom/login.css">
 <!-- start login section -->
 <div class="login_section">
