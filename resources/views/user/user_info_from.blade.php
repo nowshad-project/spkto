@@ -41,7 +41,7 @@
                             @error('language')
                             <small class="text-danger">{{ $message }}</small>
                             @enderror
-                            <input class="dropdown_profile" type="text" name="language" placeholder="Language" style="width: 100%;">
+                           <input class="dropdown_profile" type="text" name="language" placeholder="Language" style="width: 100%;">
                         </div>                       
 
                         <div class="col-lg-2">
@@ -71,7 +71,7 @@
                             @error('date_of_birth')
                             <small class="text-danger">{{ $message }}</small>
                             @enderror
-                              <input class="dropdown_profile" type="date" name="date_of_birth" placeholder="Date of Birth" style="width: 100%; color: gray;">
+                              <input class="dropdown_profile" type="text" name="date_of_birth" placeholder="Date of Birth" onfocus="(this.type='date')" style="width: 100%; color: gray;">
                         </div>                        
 
                         <div class="col-lg-2">
@@ -117,43 +117,10 @@
 		           	<div>
 		             	<p>Please select dates you're not available. Unchacked dates will be counted as available. System will count till 3 months ahed.</p>
 		           	</div>
-		           	<div>
-		           		<input type="date" name="date">
-		           	</div>
-
             <!-- multi date user choice celender section -->
-            <div class="day_select_calender">
-                <div style="width: 315px;">
 
-                    <input style="display: none" id="selectedValues" name="dates" value=""  class="updateValues date-values"/>
-                    <div id="parent">
-                            <div class="card-header month-selected col-sm" id="monthAndYear">
-                            </div>
-
-                        <div class="custome_day_year_month">
-                          <select class=" col-xs-6" name="month" id="month" onchange=""></select>
-                          <select class="col-xs-6" name="year" id="year" onchange=""></select>
-                        </div>
-                        <div class="calender_value">
-                              <table id="calendar">
-                            <thead>
-                                <tr>
-                                    <th>Su</th>
-                                    <th>Mo</th>
-                                    <th>Tu</th>
-                                    <th>We</th>
-                                    <th>Th</th>
-                                    <th>Fr</th>
-                                    <th>Sa</th>
-                                </tr>
-                            </thead>
-                            <tbody id="calendarBody"></tbody>
-                        </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
- <!-- end multi date user choice celender section -->
+           
+            <!-- end multi date user choice celender section -->
            <div class=" m-t-15">
                 <label for="" class="margin-right-60 f_b"  style="padding-left:0">Time<span style="color:gray; font-weight: normal;">(Optional)</span>:</label>
             </div>
