@@ -82,32 +82,32 @@
             <button type="submit" class="button_section_button" >Show me on the list</button>
           </center>           
         </div>
-        
 
-          <div>
-          	<div class="payment_option" >
-              <div>
-                <p>Turn on receiving payment for hourly voice chatting </p>
-                <label class="switch">
-                  <input type="checkbox" id="remember" onclick="validate()" >
-                  <span class="slider round"></span>
-                </label>
-              </div>
-          	</div>
-          </div>
+        <div>
+        	<div class="payment_option" >
+            <div>
+              <p>Turn on receiving payment for hourly voice chatting </p>
+              <label class="switch">
+                <input type="checkbox" id="remember" onclick="validate()" >
+                <span class="slider round"></span>
+              </label>
+            </div>
+        	</div>
+        </div>
         
         <script type="text/javascript">
-          function validate() {
-              if (document.getElementById('remember').checked) {
-                document.getElementById('p_from').style.display='block';
-                document.getElementById('Show_me_on_the_list').style.display='none';
-              } 
-              else {
-                document.getElementById('p_from').style.display='none';
-                document.getElementById('Show_me_on_the_list').style.display='block';
-              }
+          function validate(){
+            if (document.getElementById('remember').checked) {
+              document.getElementById('p_from').style.display='block';
+              document.getElementById('Show_me_on_the_list').style.display='none';
+            } 
+            else {
+              document.getElementById('p_from').style.display='none';
+              document.getElementById('Show_me_on_the_list').style.display='block';
+            }
           }
         </script>
+        
         <div id="p_from" style="display: none;">
           <div class="hourlyreat">
           	<div class=" m-t-15">
