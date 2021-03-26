@@ -30,58 +30,55 @@
 				@csrf
 				<div class="profile_field">
 					<div class="row">
-						<div class="col-lg-2">
+
+						<div class="col-lg-3">
 			 	 			@error('name')
 			 	 			<small class="text-danger">{{ $message }}</small>
 			 	 			@enderror
-                            <input class="dropdown_profile" type="text" value="Md Rakibuzzaman" name="name" placeholder="Name" style="width: 100%;">
-                        </div>
+              <input class="dropdown_profile" type="text" value="Md Rakibuzzaman" name="name" placeholder="Name" style="width: 100%;">
+            </div>
 
-                        <div class="col-lg-2">
-                            @error('language')
-                            <small class="text-danger">{{ $message }}</small>
-                            @enderror
-                           <input class="dropdown_profile" type="text" name="language" placeholder="Language" style="width: 100%;">
-                        </div>                       
+            <div class="col-lg-3">
+              @error('language')
+              <small class="text-danger">{{ $message }}</small>
+              @enderror
+              <input class="dropdown_profile" type="text" name="language" placeholder="Language" style="width: 100%;">
+              <select class="dropdown_profile" name="gender" style="width: 100%;">
+                <option value="" disabled="" selected="" hidden="">Gender</option>
+                <option value="">Male</option>
+                <option value="">Female</option>
+                <option value="">Other</option>
+              </select>
+            </div>                       
 
-                        <div class="col-lg-2">
-                            @error('Level')
-                            <small class="text-danger">{{ $message }}</small>
-                            @enderror
-                        	<select class="dropdown_profile" name="Level" placeholder="Level" style="width: 100%;">
-                        		<option value="" disabled="" selected="" hidden="">Lavel</option>
-                        		<option value="1">Primary</option>
-                        		<option value="2">Intermediate</option>
-                        		<option value="3">Advanced</option>
-                        	</select>
-		 	 			</div>
-		 	 			<div class="col-lg-2">
-                            @error('gender')
-                            <small class="text-danger">{{ $message }}</small>
-                            @enderror
-                            <select class="dropdown_profile" name="gender" style="width: 100%;">
-                            	<option value="" disabled="" selected="" hidden="">Gender</option>
-                            	<option value="">Male</option>
-                            	<option value="">Female</option>
-                            	<option value="">Other</option>
-                            </select>
+
+		 	 			<div class="col-lg-3">
+              @error('gender')
+              <small class="text-danger">{{ $message }}</small>
+              @enderror
+              <select class="dropdown_profile" name="gender" style="width: 100%;">
+              	<option value="" disabled="" selected="" hidden="">Gender</option>
+              	<option value="">Male</option>
+              	<option value="">Female</option>
+              	<option value="">Other</option>
+              </select>
 		 	 			</div>
 
-			 	 		<div class="col-lg-2">
-                            @error('date_of_birth')
-                            <small class="text-danger">{{ $message }}</small>
-                            @enderror
-                              <input class="dropdown_profile" type="text" name="date_of_birth" placeholder="Date of Birth" onfocus="(this.type='date')" style="width: 100%; color: gray;">
-                        </div>                        
+			 	 		<div class="col-lg-3">
+                @error('date_of_birth')
+                <small class="text-danger">{{ $message }}</small>
+                @enderror
+                <input class="dropdown_profile" type="text" name="date_of_birth" placeholder="Date of Birth" onfocus="(this.type='date')" style="width: 100%; color: gray;">
+            </div>                        
 
-                        <div class="col-lg-2">
+                        <div class="col-lg-3">
                             @error('country')
                             <small class="text-danger">{{ $message }}</small>
                             @enderror
                             <select class="dropdown_profile" id="country" name="country"  style="width: 100%;"></select>
                         </div>
 
-                        <div class="col-lg-12">
+                        <div class="col-lg-9">
                             @error('d_topic')
                             <small class="text-danger">{{ $message }}</small>
                             @enderror

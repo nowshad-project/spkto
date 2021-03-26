@@ -36,7 +36,7 @@
                               <i class="fas fa-bell" alt="Notifications"></i>
                             </a>
 
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                                 <a class="dropdown-item" href="#">You got a notification</a>
                             </div>
 
@@ -46,7 +46,8 @@
                             <a class="" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" 
+                            >
                                 <a class="dropdown-item" href="{{asset('/')}}user/update-profile-picture">Update pro. picture</a>
                                 <a class="dropdown-item" href="{{asset('/')}}user/about">About</a>
                                 <a class="dropdown-item" href="{{asset('/')}}user/notification">Notification</a>
