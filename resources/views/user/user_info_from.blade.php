@@ -77,10 +77,7 @@
                 @enderror
                 <input class="dropdown_profile" type="text" name="d_topic" placeholder="Topic you want to discuss" style="width: 100%;">
             </div>
-	        </div>
-          <center id="Show_me_on_the_list" style="margin-left: -50px; padding-top: 20px; padding-bottom: 20px;" >
-            <button type="submit" class="button_section_button" >Show me on the list</button>
-          </center>           
+	        </div>          
         </div>
 
         <div>
@@ -99,15 +96,13 @@
           function validate(){
             if (document.getElementById('remember').checked) {
               document.getElementById('p_from').style.display='block';
-              document.getElementById('Show_me_on_the_list').style.display='none';
             } 
             else {
               document.getElementById('p_from').style.display='none';
-              document.getElementById('Show_me_on_the_list').style.display='block';
             }
           }
         </script>
-        
+
         <div id="p_from" style="display: none;">
           <div class="hourlyreat">
           	<div class=" m-t-15">
@@ -223,17 +218,15 @@
                 <input class="smal_input" name="" value="" style="width: 100px" type="time">
               </div>
             </div>
-          </div>
-          <div class="button_section">
-            <button type="submit" class="button enable-ripple">Show me on the list</button>
-          </div>
-        </div>        
+          </div>          
+        </div> 
+        <div class="button_section">
+          <button type="submit" class="button enable-ripple">Show me on the list</button>
+        </div>       
       </form>
 		</div>
   </div>
 </div>
-
-
 
 
 <!--phone number country--Rakibuzzaman-->

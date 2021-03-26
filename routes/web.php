@@ -138,6 +138,14 @@ Route::group(['prefix' => 'user' ,'middleware' =>['auth:sanctum','verified', 'us
 			//notification
 			Route::get('notification', [user_notification::class, 'show_all_notification']);
 
+			//Course
+
+			//Schedule
+
+			//Requests
+
+			//Wallet
+
 			//update password
 			Route::get('update-password', [user_infoController::class, 'show_password_update']);
 			Route::post('update-password-store', [user_infoController::class, 'updatePassword']);
