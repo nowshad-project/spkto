@@ -19,14 +19,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                     	<li class="nav-item">
-                    		<a class="nav-link" href="{{asset('/')}}create-course">Upload courses</a>
+                    		<a class="nav-link" href="{{asset('/')}}user/create-course">Upload courses</a>
                     	</li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{asset('/')}}view-course">Find courses</a>
+                            <a class="nav-link" href="#">Find courses</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{asset('/')}}view-course">Premium speakers</a>
+                            <a class="nav-link" href="#">Premium speakers</a>
                         </li>
 
                         @if(Auth::check())
@@ -37,7 +37,36 @@
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                                <a class="dropdown-item" href="#">You got a notification</a>
+                                <a class="dropdown-item notification_main_item"  href="#">
+                                  <div class="textlimit">
+                                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+                                   </div>
+                                </a>
+                                <a class="dropdown-item notification_main_item"  href="#">
+                                  <div class="textlimit">
+                                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+                                   </div>
+                                </a>
+                                <a class="dropdown-item notification_main_item"  href="#">
+                                  <div class="textlimit">
+                                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+                                   </div>
+                                </a>
+                                <a class="dropdown-item notification_main_item"  href="#">
+                                  <div class="textlimit">
+                                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+                                   </div>
+                                </a>
+                                <a class="dropdown-item notification_main_item"  href="#">
+                                  <div class="textlimit">
+                                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+                                   </div>
+                                </a>
+                                <a class="dropdown-item notification_main_item"  href="#">
+                                  <div class="textlimit">
+                                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+                                   </div>
+                                </a>
                             </div>
 
                         </li>
@@ -51,10 +80,10 @@
                                 <a class="dropdown-item" href="{{asset('/')}}user/update-profile-picture">Update pro. picture</a>
                                 <a class="dropdown-item" href="{{asset('/')}}user/about">About</a>
                                 <a class="dropdown-item" href="{{asset('/')}}user/notification">Notification</a>
-                                <a class="dropdown-item" href="#">Create Course</a>
-                                <a class="dropdown-item" href="#">Schedule</a>
-                                <a class="dropdown-item" href="#">Requests</a>
-                                <a class="dropdown-item" href="#">Wallet</a>
+                                <a class="dropdown-item" href="{{asset('/')}}user/create-course">Create Course</a>
+                                <a class="dropdown-item" href="{{asset('/')}}user/schedule">Schedule</a>
+                                <a class="dropdown-item" href="{{asset('/')}}user/request">Requests</a>
+                                <a class="dropdown-item" href="{{asset('/')}}user/wallet">Wallet</a>
                                 <a class="dropdown-item" href="{{asset('/')}}user/update-password">Change password</a>
                                 <!-- Logout-->
                                 <form method="POST" action="{{ route('logout') }}">

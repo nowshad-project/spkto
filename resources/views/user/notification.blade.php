@@ -27,8 +27,55 @@
 	<div class="container">
 		<div class="as_profiel_section">
 			<h2 class="f_b">Notification</h2>
-			
+			<div>
+				<a class="dropdown-item notification_main_item"  href="#">
+	                <div style="color: #96c347;">
+	                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+	                </div>
+                </a>
 
+                <a class="dropdown-item notification_main_item"  href="#">
+	                <div style="color: #96c347;">
+	                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+	                </div>
+                </a>
+
+                <a class="dropdown-item notification_main_item"  href="#">
+	                <div style="color: #96c347;">
+	                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+	                </div>
+                </a>
+
+                <a class="dropdown-item notification_main_item"  href="#">
+	                <div style="color: #96c347;">
+	                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+	                </div>
+                </a>
+
+                <a class="dropdown-item notification_main_item"  href="#">
+	                <div style="color: #96c347;">
+	                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+	                </div>
+                </a>
+
+                <a class="dropdown-item notification_main_item"  href="#">
+	                <div style="color: #96c347;">
+	                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+	                </div>
+                </a>
+
+                <a class="dropdown-item notification_main_item"  href="#">
+	                <div style="color: #96c347;">
+	                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+	                </div>
+                </a>
+
+                <a class="dropdown-item notification_main_item"  href="#">
+	                <div style="color: #96c347;">
+	                    <img class="rounded-circle" width="40" height="40" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" /><span style="padding-left: 10px; ">Voice Chat request from Thomas</span> 
+	                </div>
+                </a>
+			</div>
 		</div>
 	</div>
 </div>    

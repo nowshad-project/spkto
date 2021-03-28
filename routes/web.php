@@ -18,7 +18,10 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\user\user_infoController;
 use App\Http\Controllers\user\user_dashboardController;
 use App\Http\Controllers\user\user_notification;
-use App\Actions\Fortify\user\UpdateUserPassword;
+use App\Http\Controllers\user\courseController;
+use App\Http\Controllers\user\RequestController;
+use App\Http\Controllers\user\scheduleController;
+use App\Http\Controllers\user\walletController;
 
 /*
 |--------------------------------------------------------------------------
@@ -139,12 +142,18 @@ Route::group(['prefix' => 'user' ,'middleware' =>['auth:sanctum','verified', 'us
 			Route::get('notification', [user_notification::class, 'show_all_notification']);
 
 			//Course
+			Route::get('create-course', [courseController::class, 'show_create_course']);
+
+			Route::get('my-course', [courseController::class, 'show_my_course']);
 
 			//Schedule
+			Route::get('schedule', [scheduleController::class, 'show_schedule']);
 
 			//Requests
+			Route::get('request', [RequestController::class, 'show_request']);
 
 			//Wallet
+			Route::get('wallet', [walletController::class, 'show_Wallet']);
 
 			//update password
 			Route::get('update-password', [user_infoController::class, 'show_password_update']);

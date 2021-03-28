@@ -19,9 +19,10 @@
     <link rel="icon" href="{{asset('/')}}images/fevicon/favicon-16x16.png" type="image/gif" sizes="16x16">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="{{asset('/')}}css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('/')}}css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
     <!--<link rel="stylesheet" href="{{asset('/')}}css/custome.css">
 
     

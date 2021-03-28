@@ -1,3 +1,13 @@
+.textlimit {
+  color: #96c347;
+  display: block;
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+
 .as_logo img{
    max-width:190px;
 }
@@ -18,6 +28,14 @@
   display: block;
   padding: 10px 32px!important;
   font-size: 15px;
+}
+
+.notification_main_item {
+    background: #f2f7e9;
+    display: block;
+    margin-bottom: 2px;
+    /*margin-top: 18px;
+     padding-top: 8px; */
 }
 
 

@@ -1,4 +1,5 @@
 @extends('layouts.frontend.frontend_layout')
+@section('title', 'About')
 @section('content')
 <!--custome css about info-->
 <link rel="stylesheet" type="text/css" href="{{asset('/')}}css/custom/user/user_info_from.css">
