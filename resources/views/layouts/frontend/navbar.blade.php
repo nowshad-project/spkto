@@ -81,7 +81,7 @@
                                 <a class="dropdown-item" href="{{asset('/')}}user/about">About</a>
                                 <a class="dropdown-item" href="{{asset('/')}}user/notification">Notification</a>
                                 <a class="dropdown-item" href="{{asset('/')}}user/create-course">Create Course</a>
-                                <a class="dropdown-item" href="{{asset('/')}}user/schedule">Schedule</a>
+                                <a class="dropdown-item" href="{{asset('/')}}user/schedule-as-speaker">Schedule</a>
                                 <a class="dropdown-item" href="{{asset('/')}}user/request">Requests</a>
                                 <a class="dropdown-item" href="{{asset('/')}}user/wallet">Wallet</a>
                                 <a class="dropdown-item" href="{{asset('/')}}user/update-password">Change password</a>

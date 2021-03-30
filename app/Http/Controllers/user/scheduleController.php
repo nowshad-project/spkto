@@ -7,8 +7,13 @@ use Illuminate\Http\Request;
 
 class scheduleController extends Controller
 {
-    public function show_schedule()
+    public function show_schedule_speaker()
     {
-    	return view('user.show_schedule');
+    	return view('user.show_schedule_speaker');
+    }
+
+    public function show_schedule_student()
+    {
+    	return view('user.show_schedule_student');
     }
 }

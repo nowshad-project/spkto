@@ -147,7 +147,8 @@ Route::group(['prefix' => 'user' ,'middleware' =>['auth:sanctum','verified', 'us
 			Route::get('my-course', [courseController::class, 'show_my_course']);
 
 			//Schedule
-			Route::get('schedule', [scheduleController::class, 'show_schedule']);
+			Route::get('schedule-as-speaker', [scheduleController::class, 'show_schedule_speaker']);
+			Route::get('schedule-as-student', [scheduleController::class, 'show_schedule_student']);
 
 			//Requests
 			Route::get('request', [RequestController::class, 'show_request']);
