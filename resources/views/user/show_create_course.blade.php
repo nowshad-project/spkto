@@ -175,9 +175,14 @@
             </form>
           </div>
         </div>
+      </div>
+      <!-- end form field section -->
+		</div>
+	</div>
+</div>
 
-    </div><!-- end form field section -->
-    <script src="{{ asset('/') }}/js/jquery-3.5.1.slim.min.js"></script>
+<!--js-->
+<script src="{{ asset('/') }}/js/jquery-3.5.1.slim.min.js"></script>
     <script src="{{ asset('/') }}/js/multidatespicker.js" type="text/javascript"></script>
     <script>
        document.forms['addListingForm'].elements['duration'].value="";
@@ -223,22 +228,5 @@
                     });
             });
        </script>
-      <!-- end course upload video -->
-
-
-
-
-
-
-
-
-
-
-
-
-			
-
-		</div>
-	</div>
-</div>    
+      <!-- end course upload video -->    
 @endsection
