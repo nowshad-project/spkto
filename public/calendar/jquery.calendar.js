@@ -193,7 +193,6 @@ var s_total_month=0;
 				}
 				else{
 					selected_date_ot=','+selected_date;
-					//else{
 					//after 1st input
 						//string to array
 						res_one = selected_dates.split(",");
@@ -210,7 +209,6 @@ var s_total_month=0;
 						}
 						//if not inputed
 						selected_dates=selected_dates+selected_date_ot;
-					//}
 				}
 			}
 			//input box inputed			
