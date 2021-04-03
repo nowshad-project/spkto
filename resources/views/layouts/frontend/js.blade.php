@@ -1,5 +1,5 @@
-    <script src="{{asset('/')}}js/jquery-3.5.1.slim.min.js"></script>
-	<script src="{{asset('/')}}js/booking-calender.js" type="text/javascript"></script>
+    <!--<script src="{{asset('/')}}js/jquery-3.5.1.slim.min.js"></script>-->
+    <!--<script src="{{asset('/')}}js/booking-calender.js" type="text/javascript"></script>
 
 	<script>
 	    var dates = $('.updateValues').val();
@@ -8,13 +8,13 @@
 	</script>
 
 
-    <script src="{{asset('/')}}js/jquery-3.5.1.slim.min.js"></script>
+
     <script src="{{asset('/')}}js/jquery.flexslider-min.js"></script>
     <script src="{{asset('/')}}js/popper.js"></script>
     <script src="{{asset('/')}}js/ripple.js"></script>
-    <script src="{{asset('/')}}js/customize.js"></script>
+    <script src="{{asset('/')}}js/customize.js"></script>-->
     <script src="{{asset('/')}}js/bootstrap.min.js"></script>
-    <script src="{{asset('/')}}js/jquery.star-rating-svg.min.js"></script>
+    <!--<script src="{{asset('/')}}js/jquery.star-rating-svg.min.js"></script>
     <script src="{{asset('/')}}js/select2.js"></script>
     <script src="{{asset('/')}}js/toggle.js"></script>
     <script src="{{asset('/')}}js/table.js"></script>
@@ -217,10 +217,10 @@
         var dates = $('.updateValues').val();
         var dsss = dates.split(', ');
 
-    </script>
+    </script>-->
 
-    <!-- able able time check function -->
-    <script>
+    <!-- able able time check function 
+    <!--<script>
         function checkAvailday(e) {
 
 
@@ -381,4 +381,4 @@
 
     (changeStatus())
 
-    </script>
+    </script>-->

@@ -99,16 +99,7 @@
                 @error("duration")
                 <p class="text-danger">{{ $message }}</p>
                 @enderror
-                  <input type="text" name="duration" value="{{ old('duration') }}" placeholder="course duration. e.g. 15 days"/>
-                 <select class="js-example-basic-duration" name="duration" id="duration" style="width: 100%; border: none; color: gray;">
-                    <option selected hidden="" >Duration of course</option>
-                   @for ($i = 1; $i < 100; $i++)
-                   @if (old("duration") == $i)
-                   <option value="{{ $i }}">{{ $i }} days</option>
-                   @endif
-                       <option value="{{ $i }}" >{{ $i }} days</option>
-                   @endfor
-                  </select>
+                  <input type="text" required="" id="duration_c_id" name="duration" value="{{ old('duration') }}" placeholder="course duration. e.g. 15 days*" oninput="duration_c()"/>                    
               </div>
 
               <!-- Class Topic-->
@@ -118,12 +109,71 @@
               <div class="form_item line_hide_form_item">
                 <div class="topic_days row">
                     <div class="col-md-6">
-                      <div class="form_item line_hide_form_item">
-                        <input type="text"  name="" value="">
+                      <div class="form_item line_hide_form_item">                        
                       </div>
                     </div>
                 </div>
               </div>
+
+              <script>
+                function duration_c(){
+                    $('.topic_days').html("");
+                    var i = "";
+                    var day_number =document.getElementById('duration_c_id').value;
+                    
+                    for (i = 1; i <= day_number; i++) {
+                        if (i == 1) {
+                            $('.topic_days').append(
+                                '<div class="col-md-6"><div class="form_item line_hide_form_item"><input type="text"  name="topic[]" placeholder="' +
+                                i + 'st Day' + '"></div></div>');
+                        } else if (i == 2) {
+                            $('.topic_days').append(
+                                '<div class="col-md-6"><div class="form_item line_hide_form_item"><input type="text"  name="topic[]" placeholder="' +
+                                i + 'nd Day' + '"></div></div>');
+                        } else if (i == 3) {
+                            $('.topic_days').append(
+                                '<div class="col-md-6"><div class="form_item line_hide_form_item"><input type="text"  name="topic[]" placeholder="' +
+                                i + 'rd Day' + '"></div></div>');
+                        } else {
+                            $('.topic_days').append(
+                                '<div class="col-md-6"><div class="form_item line_hide_form_item"><input type="text"  name="topic[]" placeholder="' +
+                                i + 'th Day' + '"></div></div>');
+                        }
+
+                    }
+                    day_number++;
+                }
+
+
+
+
+                //get te data from the variable
+                var dates = $('.updateValues').val();
+                var dsss = dates.split(', ');
+
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
               <!-- Admission fee-->
               <div class="form_item line_hide_form_item">

@@ -12,7 +12,7 @@ use Session;
 
 class user_infoController extends Controller
 { 
-
+  //profile picture
 	public function show_profile_picture_update()
 	{
 		return view('user.profile_picture_update');
@@ -45,12 +45,54 @@ class user_infoController extends Controller
         return Redirect('/user/update-profile-picture');
     }
 
-
+  //about 
 	public function show_user_info_from()
 	{
 		return view('user.user_info_from');
 	}
+  public function submit_reg_form(Request $request)
+  {
+    $this->validate($request, [
+           'name' => 'required',
+           'language' => 'required',
+           'gender' => 'required',
+           'date_of_birth' => 'required',
+           'country' => 'required',
+           'd_topic' => 'required',
+       ]);
+    echo $request->name;
+    echo $request->language;
+    echo $request->gender;
+    echo $request->date_of_birth;
+    echo $request->country;
+    echo $request->d_topic;
+    if($request->is_receiving_payment)
+    {
+      $this->validate($request, [
+           'HourlyRate' => 'required',
 
+           'Saturday' => 'required',
+           'Sunday' => 'required',
+           'Monday' => 'required',
+           'Tuesday' => 'required',
+           'Wednesday' => 'required',
+           'Thursday' => 'required',
+           'Friday' => 'required',
+       ]);
+      echo $request->HourlyRate;
+      echo $request->Saturday;
+      echo $request->Sunday;
+      echo $request->Monday;
+      echo $request->Tuesday;
+      echo $request->Wednesday;
+      echo $request->Thursday;
+      echo $request->Friday;
+    }
+  }
+
+
+
+  //password update
 	public function show_password_update()
 	{
 		return view('user.update_password');

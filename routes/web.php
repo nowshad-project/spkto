@@ -53,6 +53,10 @@ Route::get('/', function () {
     return view('frontend.home');
 });
 
+Route::get('/cal', function () {
+    return view('user.about');
+});
+
 //Auth
 Route::get('/register', [RegisteredUserController::class, 'create'])
                 ->name('register');
@@ -128,7 +132,7 @@ Route::group(['prefix' => 'user' ,'middleware' =>['auth:sanctum','verified', 'us
 
 		//user_info
 		Route::get('about', [user_infoController::class, 'show_user_info_from']);
-		//Route::post('regestration-submit', [regestrationController::class, 'submit_reg_form']);
+		Route::post('regestration-submit', [user_infoController::class, 'submit_reg_form']);
 
 		/*Route::group([ 'middleware' =>['user_info']], function (){*/
 			//Dashboard*/
